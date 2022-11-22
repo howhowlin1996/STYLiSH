@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member Sign In</title>
+        <link rel="stylesheet" href="../stylesheets/table.css">
+        <link rel="stylesheet" href="../stylesheets/template.css">
+        <link rel="stylesheet" href="../stylesheets/input.css">
+    </head>
+    <body class="container" >
+        <h1 >會員登入</h1>
+        <form action="/loginResult" method="post">
+            <div id="wrap">
+                <div >
+                    <p class="title">Email Address<br>(會員帳號):</p>
+                </div>
+                <div >
+                    <p > <input type="email" name="email"id="email" required="required"></p>
+                </div>
+                    
+            </div>
+            <div id="wrap">
+                <div >
+                    <p class="title">密碼:</p>
+                </div>
+                <div >
+                    <p > <input type="password" name="password" id="password"required="required"></p>
+                </div>
+                    
+            </div>
+           
+                <div style="margin: auto; ">
+                    <input type="submit" value="登入" class="submit" >
+                </div>
+           
+            
+        </form>
+
+    </body>
+</html>

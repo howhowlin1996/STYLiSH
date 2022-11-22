@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member Registrattion</title>
+        <link rel="stylesheet" href="../stylesheets/table.css">
+        <link rel="stylesheet" href="../stylesheets/template.css">
+        <link rel="stylesheet" href="../stylesheets/input.css">
+    </head>
+    <body class="container">
+        <h1>會員註冊</h1>
+        <form action="/api/v1/finishRegistration" method="post">
+           
+                <div id="wrap"> 
+                        <div>
+                                <label for="user_name" class="title">會員姓名:</label>
+                        </div>
+                    
+                        
+                        <div>
+                                <input type="text" name="user_name" id="user_name" required="required">
+                        </div>
+                        
+                </div> 
+                <div id="wrap">
+                        <div>
+                                <label for="email" class="title">Email Address<br>(會員帳號):</label> 
+                        </div>
+                        <div>
+                                <input type="email" name="email"id="email" required="required">
+                        </div>
+                       
+                      
+                </div>
+                <div id="wrap">
+                        <div>
+                                <label for="password"class="title">密碼:</label> 
+                        </div>
+                        <div>
+                                <input type="password" name="password"id="password" required="required">
+                        </div>
+                </div>
+                <div id="wrap">
+                        <div>
+                                <label for="password_confirm"class="title">確認密碼:</label> 
+                        </div>
+                        <div>
+                                <input type="password" id="password_confirm" required="required">
+                        </div>
+                        
+                </div>
+                <div id="wrap">
+                        <div>
+                                <label for="birthday"class="title">生日:</label> 
+                        </div>
+                        <div>
+                                <input type="date" name="birthday" id="birthday" required="required">
+                        </div>
+                        
+                </div>
+                <div id="wrap">
+                        <div>
+                                <label for="gender"class="title">性別:</label> 
+                        </div>
+                        <div>
+                                <select name="gender" id="gender" required="required">
+                                        <option>男</option>
+                                        <option>女</option>
+                                        <option>不透露</option>
+                                    </select>
+                        </div>
+                        
+
+                </div>
+                <div id="wrap">
+                    <div>
+                        <label for="country"class="title">居住國家:</label> 
+                    </div>
+                    <div>
+                        <input type="text" name="country" id="country" required="required">
+                    </div>
+                    
+                </div>
+                <div id="wrap">
+                        <div>
+                                <label for="city"class="title">居住城市:</label> 
+                        </div>
+                        <div>
+                                <input type="text" name="city" id="city" required="required"></div>
+                        </div>
+
+                </div>
+                <div id="wrap">
+                        <div id="checkIfExist" style="color: red; font-size: large; margin-left: 50%;">
+
+
+                        </div>
+                
+                </div>
+
+                <div>
+                    <input type="submit" value="送出資料" onclick="return checkPassword();"class="submit"><!--to check if the password is equal to confirm password-->
+                    <script src="../javascripts/checkPassword.js"></script>
+                </div>
+                
+                
+           
+            
+        </form>
+
+    </body>
+</html>

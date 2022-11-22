@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script text="text/javascript" src="https://js.tappaysdk.com/tpdirect/v3"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>Connect payment with TapPay</title>
+</head>
+
+<body>
+    <div style="justify-content: center;margin-bottom: 10px; text-align: center;" id="form">
+
+    </div>
+    <div style="width: 480px; margin: 50px auto;">
+        <label for="name">持卡人姓名</label>
+        <input type="text" name="name" required="required"id="name">
+        <label for="phoneNumber">持卡人電話</label>
+        <input type="tel" name="phoneNumber" required="required"id="phoneNumber">
+        <label>CardView</label>
+        <div id="cardview-container"></div>
+        <button id="submit-button" onclick="onClick()" >確認付款</button>
+        <pre id="result1"></pre>
+        <pre id="result2"></pre>
+    </div>
+    <script>
+        TPDirect.setupSDK(12348, "app_pa1pQcKoY22IlnSXq5m5WP5jFKzoRG58VEXpT7wU62ud7mMbDOGzCYIlzzLF", "sandbox")
+        TPDirect.card.setup('#cardview-container')
+        var submitButton = document.querySelector('#submit-button')
+        var cardViewContainer = document.querySelector('#cardview-container')
+        
+
+        function onClick() {
+            var name=document.getElementById('name');
+            var phoneNumber=document.getElementById('phoneNumber');
+           
+            TPDirect.card.getPrime(function (result) {
+                if (result.status !== 0) {
+                    alert('卡號或驗證碼有誤')
+                    return
+                }
+                //alert('getPrime 成功')
+                var prime = result.card.prime
+                //document.querySelector('#result1').innerHTML = JSON.stringify(result, null, 4)
+
+
+                $.post('/admin/checkout.html/pay-by-prime', {prime: prime,name: name.value,phoneNumber:phoneNumber.value}, function(data) {
+                    console.log(data);
+                    if(Object.keys(data).length==0) alert("未購買商品");
+                    else{
+                        let status=data["result"]['status']
+                        if(status==0){
+                            console.log("hahaha");
+                            alert('付款成功');
+                            window.location.href = "http://18.236.9.61/shopIndex";
+                        }
+                        else alert('付款失敗');
+                    }
+                    //document.querySelector('#result2').innerHTML = JSON.stringify(data, null, 4)
+                })
+            })
+        }
+    </script>
+    <script src="../javascripts/checkoutForm.js"></script> <!--to get the unpaid list-->
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Create</title>
+        <link rel="stylesheet" href="../stylesheets/table.css">
+        <link rel="stylesheet" href="../stylesheets/input.css">
+        <link rel="stylesheet" href="../stylesheets/template.css">
+    </head>
+
+    <body class="container">
+        <h1 style="text-align: center;">Welcome to the back-end system.</h1>
+        <div  >
+            <form action="/sendcomment" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="product_id" class="title">產品編號:</label>
+                    <input type="text" name="product_id" maxlength="15" required="required">
+                </div>
+                <div>
+                    <label for="product_name" class="title">產品名稱:</label>
+                    <input type="text" name="product_name" maxlength="15" required="required">
+                </div>
+                <div>
+                    <label for="price" class="title">價錢:</label>
+                    <input type="number" name="price" required="required">
+                </div>
+                <div>       
+                    <label for="catergory" class="title">種類:</label>
+                    <select name="catergory"  required="required">
+                        <option>男裝</option>
+                        <option>女裝</option>
+                        <option>配件</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="material_origin" class="title">素材產地:</label>
+                    <input type="text" name="material_origin" maxlength="15" required="required">
+                </div>
+
+                <div>
+                    <label for="processing_origin"class="title">加工產地:</label>
+                    <input type="text" name="processing_origin" maxlength="15" required="required">
+                </div>
+                <div>
+                    <label for="material_description" class="title">材質描述:</label>
+                    <input type="text" name="material_description" maxlength="50" required="required">
+                </div>
+            
+                    
+                            
+                <div id="variantInput" class="variantInput">
+                    
+                        <label for="size" class="title">尺寸</label>
+                        <select class="select_table" name="size" required="required">
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    
+                        <label for="color" class="title">顏色</label>
+                        <input type="text" name="color" required="required">
+                    
+                        <label for="number" class="title">數量</label>
+                        <input type="number"  name="amounts" required="required">
+                    
+                </div>
+
+                <div>
+                <input type="button" value="新增尺寸、顏色、數量" onClick="addInput('variantInput');">
+                </div>
+                
+                <script src="../javascripts/addRow.js"></script> <!--add rows about size/color/amount-->
+
+                <div>
+                    <label for="main_image" class="title">主圖片上傳:</label>
+                    <input type="file" accept="image/*" name="main_image" required="required">
+                </div>
+                <div>
+                    <label for="subtle_image1" class="title">產品內容圖片一</label>
+                    <input type="file" accept="image/*" name="subtle_image1" required="required">
+                </div>
+                <div>
+                    <label for="subtle_description1" class="title">產品說明一</label>
+                    <textarea name="subtle_description1" rows="20" cols="25" required="required"></textarea>
+                </div>
+                <div>
+                    <label for="subtle_image2" class="title">產品內容圖片二</label>
+                    <input type="file" accept="image/*" name="subtle_image2" required="required">
+                </div>
+                <div>
+                    <label for="subtle_description2" class="title">產品說明二</label>
+                    <textarea name="subtle_description2" rows="20" cols="25" required="required"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="送出資料" style="margin-left: 20%;"> 
+                </div>
+                
+            </form>
+        </div>
+        
+    </body>
+ </html>
+
+
+ 
+ 

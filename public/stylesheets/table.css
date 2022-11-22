@@ -1,0 +1,32 @@
+
+.title{
+    float: left;
+    width: 200px;
+    padding-right: 10px;
+}
+.submit{
+    text-align: center;
+    margin-left: 40%;
+    width: 50%;
+    font-size: medium;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+.variantInput{
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    
+}
+.variantDiv{
+    border-top: 1px solid black;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-bottom: 1px;
+    margin-left: -40px;
+    border-bottom: 1px ;
+}
+
+
+

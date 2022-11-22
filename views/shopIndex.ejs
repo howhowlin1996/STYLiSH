@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping</title>
+        <link rel="stylesheet" href="../stylesheets/table.css">
+        <link rel="stylesheet" href="../stylesheets/input.css">
+        <link rel="stylesheet" href="../stylesheets/template.css">
+        
+    </head>
+
+    <body class="container">
+        <h1 style="margin-left: 28%;">商品購物頁</h1>
+        <div  >
+                <div  >
+                    
+                    <label for="product_name" class="title">產品</label>
+                    <select id="product_name"class="select_table" name="product_name" required="required">
+                        <option>兄弟象球衣</option>
+                        <option>好醜洋裝</option>
+                        <option>維尼熊上衣</option>
+                        <option>輕鬆牛仔褲</option>
+                    </select>
+                    
+                   
+                
+                    <label for="color" class="title">顏色</label>
+                    <select class="select_table" name="color" required="required" id="color">
+                    </select>
+
+                    <label for="size" class="title">尺寸</label>
+                    <select class="select_table" name="size" required="required" id="size">
+                    </select>
+                
+                    <label for="number" class="title">數量</label>
+                    <input type="number"  name="amounts" required="required" id="amounts">
+                   
+                    <div id="priceDiv" style="width: 100%; text-align: center;  margin-left: 20%;margin-top: 20px;">
+
+                    </div>
+                    
+
+                    
+                
+                </div>
+                <div style="margin-top: 20px; margin-left: 200px;" id="wrap">
+                    <input type="button" value="會員資料" id="userInformButton"style="margin-right: 2px;">
+                    <input type="button" value="購買" id="sendButton" style="margin-right: 2px;"> 
+                    <input type="button" value="購物車"id="shopCartButton" style="margin-right: 2px;">
+                </div>
+        </div>
+        <script src="../javascripts/shopButton.js"></script>     <!--to get button function and the web cookies-->
+    </body>
+ </html>
