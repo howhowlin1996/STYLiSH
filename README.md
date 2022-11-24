@@ -6,11 +6,11 @@
 
 ## Front-End
 
-React.js,HTML,CSS,JavaScript
+React.js, HTML, CSS, JavaScript
 
 ## Back-End
 
-Node.js,Express.js,Javascript
+Node.js, Express.js, Javascript
 
 ## Database
 
