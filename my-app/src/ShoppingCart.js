@@ -207,7 +207,7 @@ async function SendOrders(totalUnpayment){
     var unpaidList=JSON.parse(shopCartList);
    console.log('sendorders',totalUnpayment);
     
-    await fetch("https://18.236.9.61/api/v1/sendOrders",{
+    await fetch("http://localhost:3000/api/v1/sendOrders",{
         method:'post',
         headers:{
             'content-type': 'application/json',
@@ -236,7 +236,7 @@ async function Delivery(totalUnpayment){
     deliveryInform['order_total_consume']=totalUnpayment;
    
     console.log('delivery',totalUnpayment);
-    await fetch("https://18.236.9.61/api/v1/delivery/insert",{
+    await fetch("http://localhost:3000/api/v1/delivery/insert",{
                     method:'post',
                     headers:{
                         'content-type': 'application/json',

@@ -4,7 +4,7 @@ const checkEmailDiv=document.getElementById("checkIfExist");
 let flag=true;
 function updateValue(e){
     console.log(e.target.value);
-    fetch("http://18.236.9.61/api/v1/checkEmail",{
+    fetch("http://http://localhost:3000/api/v1/checkEmail",{
         method:'post',
         headers:{
             'content-type': 'application/json',

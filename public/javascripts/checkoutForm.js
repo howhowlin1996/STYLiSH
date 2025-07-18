@@ -4,7 +4,7 @@ const myParam = urlParams.get('id')
 console.log(myParam);
 showCart();
 function showCart(){
-    fetch("http://18.236.9.61/api/v1/orders/unpaid?id="+myParam,{ //fetch data from getUnpaidOrder
+    fetch("http://http://localhost:3000/api/v1/orders/unpaid?id="+myParam,{ //fetch data from getUnpaidOrder
     method:'get',
     headers:{
         'content-type': 'application/json',

@@ -95,7 +95,7 @@ function IconDiv(props){
             </NavItem>
            
             <NavItem style={{marginLeft:"20%",marginTop:"auto",marginBottom:"auto"}} onMouseMove={()=>{cartMouseChange(1)}} onMouseOut={()=>{cartMouseChange(0)}}>
-                <a href={"https://18.236.9.61/shopCart"}>
+                <a href={"http://localhost:3000/shopCart"}>
                     < img src={cartIcon[cartMouseMove]} alt="shop cart button"   />
                 </a>
             </NavItem>
@@ -162,18 +162,18 @@ function NavbarDiv(props){
 
                     <CatergoryBar navbar>
                         <NavItem >
-                        <a href="https://18.236.9.61/?catergory=women"><CatergoryName style={{color:color[0]}} onClick={(e)=>{catergoryChange('women')}} >
+                        <a href="http://localhost:3000/?catergory=women"><CatergoryName style={{color:color[0]}} onClick={(e)=>{catergoryChange('women')}} >
                                 女裝<span style={{color:"black"}}>|</span>
                             </CatergoryName></a>
                             
                         </NavItem>
                         <NavItem >
-                            <a href="https://18.236.9.61/?catergory=men"><CatergoryName style={{color:color[1]}}onClick={(e)=>{catergoryChange('men')}} >
+                            <a href="http://localhost:3000/?catergory=men"><CatergoryName style={{color:color[1]}}onClick={(e)=>{catergoryChange('men')}} >
                                 男裝<span style={{color:"black"}}>|</span>
                             </CatergoryName></a>
                         </NavItem>
                         <NavItem >
-                        <a href="https://18.236.9.61/?catergory=accessories"><CatergoryName style={{color:color[2]}}onClick={(e)=>{catergoryChange('accesories')}}>
+                        <a href="http://localhost:3000/?catergory=accessories"><CatergoryName style={{color:color[2]}}onClick={(e)=>{catergoryChange('accesories')}}>
                                 配件
                             </CatergoryName></a>
                         </NavItem>

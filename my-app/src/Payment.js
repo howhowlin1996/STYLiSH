@@ -285,7 +285,7 @@ function Pay(){
         var prime = result.card.prime
     
         //console.log(prime,name,phone);
-        fetch("https://18.236.9.61/api/v1/payment/pay-by-prime?id="+userId,{
+        fetch("http://localhost:3000/api/v1/payment/pay-by-prime?id="+userId,{
             method:'post',
             headers:{
                 'content-type': 'application/json',
@@ -306,7 +306,7 @@ function Pay(){
                 if(status==0){
                     alert('付款成功');
                     localStorage.removeItem('shopCart'+userId);
-                    window.location.href = "https://18.236.9.61";
+                    window.location.href = "http://localhost:3000";
                 }
                 else alert('付款失敗');
             }
@@ -333,7 +333,7 @@ function Payment (){
     const [unpaidList,changeUnpaidList]=useState([]);
     TapPayScript("https://js.tappaysdk.com/tpdirect/v5.8.0");
     useEffect(() => {
-        fetch("https://18.236.9.61/api/v1/orders/unpaid?id="+userId)
+        fetch("http://localhost:3000/api/v1/orders/unpaid?id="+userId)
           .then(res => res.json())
           .then(
             (result) => {

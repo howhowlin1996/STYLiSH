@@ -267,7 +267,7 @@ function ColorRow(props){                                          //color will 
   const [colorState,colorChoose]=useState(colors[0]);
   const [sizeList,setSize] = useState([]);
   useEffect(() => {
-    fetch("https://18.236.9.61/api/v1/products/details?id="+props.idnow+"&&color="+colorState)
+    fetch("http://localhost:3000/api/v1/products/details?id="+props.idnow+"&&color="+colorState)
       .then(res => res.json())
       .then(
         (result) => {
@@ -518,7 +518,7 @@ function ProductDetail() {
   const [detailList,setDetail] = useState([]);
   //console.log(id,color);
   useEffect(() => {
-      fetch("https://18.236.9.61/api/v1/products/details?id="+id+"&&color="+color)
+      fetch("https://localhost:3000/api/v1/products/details?id="+id+"&&color="+color)
         .then(res => res.json())
         .then(
           (result) => {

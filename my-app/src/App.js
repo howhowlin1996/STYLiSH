@@ -135,7 +135,7 @@ function ProductListFirst(props){
             //console.log(colorList[0]);
             return(
             <Col xs="12" md="6" lg="4" className="bg-white  py-2 text-center" key={item['product_id']}>
-                <a href={"https://18.236.9.61/productDetail?id="+item['product_id']+"&&color="+colorList[0]}>
+                <a href={"http://localhost:3000/productDetail?id="+item['product_id']+"&&color="+colorList[0]}>
                 <Productimg src={img_path}  ></Productimg>
                 </a>
                 <Row style={{marginTop:"20px",marginBottom:"20px",marginLeft:"auto"}}>
@@ -177,7 +177,7 @@ function ProductListSecond(props){
                 if(count>3){
                     return(
                     <Col xs="12" md="6" lg="4" className="bg-white  py-2 text-center"  key={item['product_id']+colorList[0]} >
-                        <a href={"https://18.236.9.61/productDetail?id="+item['product_id']+"&&color="+colorList[0]}>
+                        <a href={"http://localhost:3000/productDetail?id="+item['product_id']+"&&color="+colorList[0]}>
                         <Productimg src={img_path} ></Productimg>
                         </a>
                         <Row style={{marginTop:"20px",marginBottom:"20px",marginLeft:"auto"}}>
@@ -216,7 +216,7 @@ function Main (){
     catergoryChoose=name;
     //console.log(name);
     useEffect(() => {
-        fetch("https://18.236.9.61/api/v1/products/"+name)
+        fetch("http://localhost:3000/api/v1/products/"+name)
           .then(res => res.json())
           .then(
             (result) => {

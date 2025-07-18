@@ -6,7 +6,7 @@ margin: { t: 0 } } );*/
 let data;
 //getData();
 async function getData(){
-    await fetch("http://18.236.9.61/api/v1/dashboard/getData",{ 
+    await fetch("http://http://localhost:3000/api/v1/dashboard/getData",{ 
         method:'get',
         headers:{
             'content-type': 'application/json',

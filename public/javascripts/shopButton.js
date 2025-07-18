@@ -43,7 +43,7 @@ getColor(productDom.value);
 
 function getColor(product_name){                                            // renew color select and send id & color to getSize()
     if(colorDom.options.lengt!=0)colorDom.options.length=0;
-    fetch("http://18.236.9.61/api/v1/products/search?keyword="+product_name,{ //fetch data from searchApi
+    fetch("http://http://localhost:3000/api/v1/products/search?keyword="+product_name,{ //fetch data from searchApi
         method:'get',
         headers:{
             'content-type': 'application/json',
@@ -70,7 +70,7 @@ function getColor(product_name){                                            // r
 }
 function getSize(id,color){                                                      //renew size select input, fetch data from detail api
     if(sizeDom.options.lengt!=0)sizeDom.options.length=0;                       //clear select option to insert new one
-    fetch("http://18.236.9.61/api/v1/products/details?id="+id+"&&color="+color,{ 
+    fetch("http://http://localhost:3000/api/v1/products/details?id="+id+"&&color="+color,{ 
         method:'get',
         headers:{
             'content-type': 'application/json',
@@ -116,7 +116,7 @@ function sendClick(e){
     //console.log(id,colorChoose, sizeChoose,amountChoose);
     goodAmount++;
    
-    fetch("http://18.236.9.61/api/v1/sendOrders",{
+    fetch("http://http://localhost:3000/api/v1/sendOrders",{
         method:'post',
         headers:{
             'content-type': 'application/json',
@@ -139,11 +139,11 @@ function sendClick(e){
 }
 
 function userInformPage(e){
-    window.open("http://18.236.9.61/memberProfile")     //button for 會員資料
+    window.open("http://http://localhost:3000/memberProfile")     //button for 會員資料
 
 }
 
 function shopCartChange(e){
     //console.log(user_id);
-    window.open("http://18.236.9.61/admin/checkout.html?id="+user_id);  //button for shopcart
+    window.open("http://http://localhost:3000/admin/checkout.html?id="+user_id);  //button for shopcart
 }
